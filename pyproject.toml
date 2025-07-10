@@ -1,0 +1,27 @@
+[tool.poetry]
+package-mode = true
+name = "employment-schedule"
+version = "0.1.0"
+description = ""
+authors = ["Даниил Агафонов <iiagafon@yandex.ru>"]
+readme = "README.md"
+packages = [
+    { include = "check_slot_service", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<3.14"
+requests = "^2.32.4"
+pydantic = "^2.11.7"
+ruff = "^0.12.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,12 @@
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.env
+!.env.example
+
+.idea/
+
+**/__pycache__
+*.pyc
